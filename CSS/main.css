@@ -1,0 +1,193 @@
+/*Selector universal*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*CREAMOS LA PALETA DE COLORES */
+:root{
+--pale-blue: hsl(225, 100%, 94%);
+--Bright-blue:hsl(245, 75%, 52%);
+--Very-pale-blue: hsl(225, 100%, 98%);
+--Desaturated-blue: hsl(224,23%,55%);
+--Dark-blue:hsl(224, 47%, 23%);
+}
+
+/*LE AGREGAMOS ESTILOS AL CUERPO DE MI PAGINA WEB */
+body{
+    background-color: var(--pale-blue);
+    overflow: hidden;
+    background-image:url(../images/pattern-background-desktop.svg);/*le agregamos una imagen de fondo a nuestra pagina web*/
+    background-repeat: no-repeat; 
+}
+
+
+/********************CAJA PRINCIPAL *********************/
+.container {
+    /*utilizamos flexbox*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4%;
+}
+
+/***********CAJA HIJA**********************************************/
+.container-hija{
+
+    /***UTILIZAMOS FLEXBOX****/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    width: 24rem;
+    height: auto;
+    
+    padding: 0 2%;
+    padding-bottom: 1em;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px rgb(205, 202, 243);   
+
+    overflow: hidden;
+    background: #FFFFFF;
+
+}
+
+/*la imagen la ponemos al 120 porciento para que ocupe toda la caja principal*/
+.container img{
+    width: 120%;
+}
+
+/*****LE AGREGAMOS ESTILOS A LOS TEXTOS ***********/
+.container-hija h1{
+    width: 100%;
+    font-weight: 700;
+    font-size: 30px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.container-hija h1{
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+/*****************TEXTO SECUNDARIO *************/
+.container-hija p {
+    font-family: sans-serif;
+    font-size: 16px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/*******LE AGREAMOS ESTILOS A LA SECCION DE LOS PLANES DE PAGO ***********/
+.contenedor-Pago{ 
+
+    /*LE AGREGAMOS FLEXBOX AL CONTENEDOR DE PAGO*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: sans-serif;    
+    
+    background: var(--Very-pale-blue);
+    border-radius: 10px;    
+    width: 90%;
+    height: 80px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.contenedor-Pago img {
+    width: 16%;
+}
+
+.contenedor-Pago a { 
+    color: var(--Bright-blue);
+    font-weight: bolder;
+    font-size: 15px;
+}
+.contenedor-Pago a:hover{
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+.Texto-plan {
+    line-height: 50%;
+    margin-right: auto;
+    padding-left: 5%;
+}
+
+.Texto-plan h2 {
+    font-size: 18px;
+    font-family: sans-serif;
+    padding-bottom: 10px;
+}
+
+.Texto-plan h3 {
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: normal;
+}
+
+
+/**************************************/
+/******LE AGREGAMOS ESTILOS AL BOTON *******/
+button{
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: bold;
+    background: var(--Bright-blue);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgb(124, 118, 199); 
+    width: 90%;
+    margin: 10px auto;/*Centra el boton en la caja */
+    color: #fff;
+    height: 40px;
+    cursor: pointer;
+}
+
+button:hover {
+    transition: all 0.3s;
+    opacity: 0.8;
+}
+
+/*********PARTE DE CANCELAR ORDEN ************/
+.Cancelar-orden{    
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 16px;
+    text-align: center;
+    margin: 5% auto;
+}
+
+.Cancelar-orden a {
+    text-decoration: none;
+    color: #000000;
+   
+}
+
+.Cancelar-orden a:hover {
+    transition: all 0.3s;
+    color: var(--Dark-blue);
+}
+
+/*LE AGREGAMOS MEDIA QUERYS*/
+@media (max-width: 600px) {
+   
+    .container-hija p {
+        width: 90%;
+        font-size: 15px;
+    }
+    .Cancelar-orden {
+        width: 90%;
+        font-size: 15px;
+    }
+
+  }
